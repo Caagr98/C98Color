@@ -16,12 +16,13 @@ hi CursorLineNr ctermfg=yellow      ctermbg=black       cterm=bold
 
 hi Directory    ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi NonText      ctermfg=yellow      ctermbg=NONE        cterm=NONE
-hi SpecialKey   ctermfg=darkgray    ctermbg=NONE        cterm=NONE
+hi SpecialKey   ctermfg=darkgray    ctermbg=NONE        cterm=bold
+hi Whitespace   ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 
-hi SpellBad     ctermfg=white       ctermbg=darkred
-hi SpellCap     ctermfg=white       ctermbg=darkblue
-hi SpellLocal   ctermfg=black       ctermbg=cyan
-hi SpellRare    ctermfg=white       ctermbg=darkmagenta
+hi SpellBad     ctermfg=white       ctermbg=darkred     cterm=NONE
+hi SpellCap     ctermfg=white       ctermbg=darkblue    cterm=NONE
+hi SpellLocal   ctermfg=black       ctermbg=cyan        cterm=NONE
+hi SpellRare    ctermfg=white       ctermbg=darkmagenta cterm=NONE
 
 hi DiffAdd      ctermfg=white       ctermbg=darkblue    cterm=NONE
 hi DiffChange   ctermfg=black       ctermbg=darkmagenta cterm=NONE
@@ -41,10 +42,11 @@ hi StatusLine   ctermfg=black       ctermbg=white       cterm=bold
 hi StatusLineNC ctermfg=darkgray    ctermbg=white       cterm=NONE
 hi WildMenu     ctermfg=white       ctermbg=darkblue    cterm=bold
 hi VertSplit    ctermfg=white       ctermbg=white       cterm=NONE
+hi ColorColumn  ctermfg=white       ctermfg=black       cterm=NONE
 
 hi TabLine      ctermfg=white       ctermbg=black       cterm=NONE
 hi TabLineFill  ctermfg=NONE        ctermbg=black       cterm=NONE
-hi TabLineSel   ctermfg=white       ctermbg=black       cterm=bold
+hi TabLineSel   ctermfg=white       ctermbg=black       cterm=bold,underline
 
 " Cursor / dynamic / other {{{1
 hi Cursor       ctermfg=black       ctermbg=white       cterm=NONE
@@ -54,10 +56,10 @@ hi CursorColumn ctermfg=NONE        ctermbg=black       cterm=NONE
 
 hi Visual       ctermfg=NONE        ctermbg=NONE        cterm=reverse
 
-hi IncSearch    ctermfg=cyan        ctermbg=NONE         cterm=underline,reverse
+hi IncSearch    ctermfg=cyan        ctermbg=NONE        cterm=underline,reverse
 hi Search       ctermfg=NONE        ctermbg=NONE        cterm=underline
 
-hi MatchParen   ctermfg=blue        ctermbg=NONE         cterm=NONE
+hi MatchParen   ctermfg=blue        ctermbg=NONE        cterm=NONE
 
 " Listings / messages {{{1
 hi ModeMsg      ctermfg=yellow      ctermbg=NONE        cterm=NONE
@@ -70,12 +72,13 @@ hi WarningMsg   ctermfg=yellow      ctermbg=NONE        cterm=bold
 " Syntax highlighting groups {{{1
 hi Comment      ctermfg=brown       ctermbg=NONE        cterm=NONE
 hi Constant     ctermfg=red         ctermbg=NONE        cterm=NONE
+ hi String      ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi Identifier   ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi Statement    ctermfg=green       ctermbg=NONE        cterm=bold
  hi Operator    ctermfg=magenta     ctermbg=NONE        cterm=NONE
 hi PreProc      ctermfg=darkblue    ctermbg=NONE        cterm=NONE
 hi Type         ctermfg=blue        ctermbg=NONE        cterm=bold
-hi Special      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+hi Special      ctermfg=NONE        ctermbg=NONE        cterm=bold
  hi Delimiter   ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Underlined   ctermfg=NONE        ctermbg=NONE        cterm=underline
 hi Ignore       ctermfg=darkgray    ctermbg=NONE        cterm=NONE
@@ -86,6 +89,9 @@ hi Todo         ctermfg=black       ctermbg=NONE        cterm=bold
 hi link hsExprKeyword Statement
 hi link hsStructure Operator
 hi link shDerefSimple Identifier
+hi lilyDuration ctermfg=red ctermbg=NONE cterm=bold
+hi lilyRest ctermfg=magenta ctermbg=NONE cterm=bold
+hi lilyLyric cterm=italic
 
 " }}}
 let &cpo = save_cpo
