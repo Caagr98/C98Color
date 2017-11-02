@@ -11,9 +11,6 @@ hi Normal       ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Folded       ctermfg=brown       ctermbg=black       cterm=NONE
 hi Conceal      ctermfg=None        ctermbg=black       cterm=NONE
 
-hi LineNr       ctermfg=darkgray    ctermbg=black       cterm=NONE
-hi CursorLineNr ctermfg=yellow      ctermbg=black       cterm=bold
-
 hi Directory    ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi NonText      ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi SpecialKey   ctermfg=darkgray    ctermbg=NONE        cterm=bold
@@ -30,8 +27,10 @@ hi DiffDelete   ctermfg=black       ctermbg=red         cterm=bold
 hi DiffText     ctermfg=white       ctermbg=green       cterm=bold
 
 " Borders / separators / menus {{{1
-hi FoldColumn   ctermfg=lightgray   ctermbg=darkgray    cterm=NONE
-hi SignColumn   ctermfg=lightgray   ctermbg=darkgray    cterm=NONE
+hi FoldColumn   ctermfg=lightgray   ctermbg=black       cterm=NONE
+hi SignColumn   ctermfg=lightgray   ctermbg=black       cterm=NONE
+hi LineNr       ctermfg=darkgray    ctermbg=black       cterm=NONE
+hi CursorLineNr ctermfg=yellow      ctermbg=black       cterm=bold
 
 hi Pmenu        ctermfg=white       ctermbg=darkgray    cterm=NONE
 hi PmenuSel     ctermfg=cyan        ctermbg=darkgray    cterm=bold
@@ -42,7 +41,7 @@ hi StatusLine   ctermfg=black       ctermbg=white       cterm=bold
 hi StatusLineNC ctermfg=darkgray    ctermbg=white       cterm=NONE
 hi WildMenu     ctermfg=white       ctermbg=darkblue    cterm=bold
 hi VertSplit    ctermfg=white       ctermbg=white       cterm=NONE
-hi ColorColumn  ctermfg=white       ctermfg=black       cterm=NONE
+hi ColorColumn  ctermfg=NONE        ctermbg=black       cterm=NONE
 
 hi TabLine      ctermfg=white       ctermbg=black       cterm=NONE
 hi TabLineFill  ctermfg=NONE        ctermbg=black       cterm=NONE
@@ -59,7 +58,7 @@ hi Visual       ctermfg=NONE        ctermbg=NONE        cterm=reverse
 hi IncSearch    ctermfg=cyan        ctermbg=NONE        cterm=underline,reverse
 hi Search       ctermfg=NONE        ctermbg=NONE        cterm=underline
 
-hi MatchParen   ctermfg=blue        ctermbg=NONE        cterm=NONE
+hi MatchParen   ctermfg=darkgreen   ctermbg=NONE        cterm=NONE
 
 " Listings / messages {{{1
 hi ModeMsg      ctermfg=yellow      ctermbg=NONE        cterm=NONE
@@ -73,7 +72,8 @@ hi WarningMsg   ctermfg=yellow      ctermbg=NONE        cterm=bold
 hi Comment      ctermfg=brown       ctermbg=NONE        cterm=NONE
 hi Constant     ctermfg=red         ctermbg=NONE        cterm=NONE
  hi String      ctermfg=blue        ctermbg=NONE        cterm=NONE
-hi Identifier   ctermfg=yellow      ctermbg=NONE        cterm=NONE
+hi Function     ctermfg=yellow      ctermbg=NONE        cterm=bold
+ hi Identifier  ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi Statement    ctermfg=green       ctermbg=NONE        cterm=bold
  hi Operator    ctermfg=magenta     ctermbg=NONE        cterm=NONE
 hi PreProc      ctermfg=darkblue    ctermbg=NONE        cterm=NONE
@@ -89,9 +89,22 @@ hi Todo         ctermfg=black       ctermbg=NONE        cterm=bold
 hi link hsExprKeyword Statement
 hi link hsStructure Operator
 hi link shDerefSimple Identifier
-hi lilyDuration ctermfg=red ctermbg=NONE cterm=bold
-hi lilyRest ctermfg=magenta ctermbg=NONE cterm=bold
+hi lilyDuration ctermfg=red cterm=bold
+hi lilyRest ctermfg=blue
 hi lilyLyric cterm=italic
+hi lilyCommand ctermfg=yellow cterm=bold
+
+" ALE {{{1
+hi ALEError            ctermfg=red    cterm=bold,italic
+hi ALEErrorSign        ctermfg=red    cterm=bold ctermbg=black
+hi ALEStyleError       ctermfg=red    cterm=italic
+hi ALEStyleErrorSign   ctermfg=red               ctermbg=black
+hi ALEWarning          ctermfg=yellow cterm=bold,italic
+hi ALEWarningSign      ctermfg=yellow cterm=bold ctermbg=black
+hi ALEStyleWarning     ctermfg=yellow cterm=italic
+hi ALEStyleWarningSign ctermfg=yellow            ctermbg=black
+hi ALEInfo             ctermfg=NONE   cterm=none
+hi ALEInfoSign                        cterm=none ctermbg=black
 
 " }}}
 let &cpo = save_cpo
