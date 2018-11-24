@@ -4,107 +4,128 @@ let g:colors_name="c98color"
 
 let save_cpo = &cpo
 set cpo&vim
+augroup C98Color
+	au!
+augroup END
 
 " Text {{{1
-hi Normal       ctermfg=white       ctermbg=NONE        cterm=NONE
+hi Normal                ctermfg=NONE  ctermbg=NONE cterm=NONE
 
-hi Folded       ctermfg=brown       ctermbg=black       cterm=NONE
-hi Conceal      ctermfg=None        ctermbg=black       cterm=NONE
+hi Folded                ctermfg=003  ctermbg=000  cterm=NONE
+hi Conceal               ctermfg=NONE ctermbg=000  cterm=NONE
 
-hi Directory    ctermfg=cyan        ctermbg=NONE        cterm=NONE
-hi NonText      ctermfg=yellow      ctermbg=NONE        cterm=NONE
-hi SpecialKey   ctermfg=darkgray    ctermbg=NONE        cterm=bold
-hi Whitespace   ctermfg=darkgray    ctermbg=NONE        cterm=NONE
+hi Directory             ctermfg=014  ctermbg=NONE cterm=NONE
+hi NonText               ctermfg=011  ctermbg=NONE cterm=NONE
+hi SpecialKey            ctermfg=008  ctermbg=NONE cterm=BOLD
+hi Whitespace            ctermfg=008  ctermbg=NONE cterm=NONE
 
-hi SpellBad     ctermfg=white       ctermbg=darkred     cterm=NONE
-hi SpellCap     ctermfg=white       ctermbg=darkblue    cterm=NONE
-hi SpellLocal   ctermfg=black       ctermbg=cyan        cterm=NONE
-hi SpellRare    ctermfg=white       ctermbg=darkmagenta cterm=NONE
+hi SpellBad              ctermfg=NONE ctermbg=001  cterm=NONE
+hi SpellCap              ctermfg=NONE ctermbg=004  cterm=NONE
+hi SpellLocal            ctermfg=NONE ctermbg=014  cterm=NONE
+hi SpellRare             ctermfg=NONE ctermbg=005  cterm=NONE
 
-hi DiffAdd      ctermfg=white       ctermbg=darkblue    cterm=NONE
-hi DiffChange   ctermfg=black       ctermbg=darkmagenta cterm=NONE
-hi DiffDelete   ctermfg=black       ctermbg=red         cterm=bold
-hi DiffText     ctermfg=white       ctermbg=green       cterm=bold
+hi DiffAdd               ctermfg=NONE ctermbg=004  cterm=NONE
+hi DiffChange            ctermfg=NONE ctermbg=005  cterm=NONE
+hi DiffDelete            ctermfg=NONE ctermbg=009  cterm=BOLD
+hi DiffText              ctermfg=NONE ctermbg=010  cterm=BOLD
 
 " Borders / separators / menus {{{1
-hi FoldColumn   ctermfg=lightgray   ctermbg=black       cterm=NONE
-hi SignColumn   ctermfg=lightgray   ctermbg=black       cterm=NONE
-hi LineNr       ctermfg=darkgray    ctermbg=black       cterm=NONE
-hi CursorLineNr ctermfg=yellow      ctermbg=black       cterm=bold
+hi FoldColumn            ctermfg=007  ctermbg=000  cterm=NONE
+hi SignColumn            ctermfg=007  ctermbg=000  cterm=NONE
+hi LineNr                ctermfg=008  ctermbg=000  cterm=NONE
+hi CursorLineNr          ctermfg=011  ctermbg=000  cterm=BOLD
+hi VertSplit             ctermfg=000  ctermbg=000  cterm=NONE
+hi ColorColumn           ctermfg=NONE ctermbg=000  cterm=NONE
 
-hi Pmenu        ctermfg=white       ctermbg=darkgray    cterm=NONE
-hi PmenuSel     ctermfg=cyan        ctermbg=darkgray    cterm=bold
-hi PmenuSbar    ctermfg=black       ctermbg=black       cterm=NONE
-hi PmenuThumb   ctermfg=gray        ctermbg=gray        cterm=NONE
+hi Pmenu                 ctermfg=015  ctermbg=008  cterm=NONE
+hi PmenuSel              ctermfg=014  ctermbg=008  cterm=BOLD
+hi PmenuSbar             ctermfg=000  ctermbg=000  cterm=NONE
+hi PmenuThumb            ctermfg=007  ctermbg=007  cterm=NONE
 
-hi StatusLine   ctermfg=black       ctermbg=white       cterm=bold
-hi StatusLineNC ctermfg=darkgray    ctermbg=white       cterm=NONE
-hi WildMenu     ctermfg=white       ctermbg=darkblue    cterm=bold
-hi VertSplit    ctermfg=white       ctermbg=white       cterm=NONE
-hi ColorColumn  ctermfg=NONE        ctermbg=black       cterm=NONE
+hi StatusLine            ctermfg=000  ctermbg=015  cterm=BOLD
+hi StatusLineNC          ctermfg=008  ctermbg=015  cterm=NONE
+hi WildMenu              ctermfg=NONE ctermbg=004  cterm=BOLD
 
-hi TabLine      ctermfg=white       ctermbg=black       cterm=NONE
-hi TabLineFill  ctermfg=NONE        ctermbg=black       cterm=NONE
-hi TabLineSel   ctermfg=white       ctermbg=black       cterm=bold,underline
+hi TabLine               ctermfg=NONE ctermbg=000  cterm=NONE
+hi TabLineFill           ctermfg=NONE ctermbg=000  cterm=NONE
+hi TabLineSel            ctermfg=NONE ctermbg=000  cterm=BOLD,UNDERLINE
 
 " Cursor / dynamic / other {{{1
-hi Cursor       ctermfg=black       ctermbg=white       cterm=NONE
-hi CursorIM     ctermfg=black       ctermbg=white       cterm=reverse
-hi CursorLine   ctermfg=NONE        ctermbg=black       cterm=NONE
-hi CursorColumn ctermfg=NONE        ctermbg=black       cterm=NONE
+hi Cursor                ctermfg=000  ctermbg=015  cterm=NONE
+hi CursorIM              ctermfg=000  ctermbg=015  cterm=REVERSE
+hi CursorLine            ctermfg=NONE ctermbg=000  cterm=NONE
+hi CursorColumn          ctermfg=NONE ctermbg=000  cterm=NONE
 
-hi Visual       ctermfg=NONE        ctermbg=NONE        cterm=reverse
+hi Visual                ctermfg=NONE ctermbg=NONE cterm=REVERSE
 
-hi IncSearch    ctermfg=cyan        ctermbg=NONE        cterm=underline,reverse
-hi Search       ctermfg=NONE        ctermbg=NONE        cterm=underline
+hi IncSearch             ctermfg=014  ctermbg=NONE cterm=UNDERLINE,REVERSE
+hi Search                ctermfg=NONE ctermbg=NONE cterm=UNDERLINE
 
-hi MatchParen   ctermfg=darkgreen   ctermbg=NONE        cterm=NONE
+hi MatchParen            ctermfg=002  ctermbg=NONE cterm=NONE
 
 " Listings / messages {{{1
-hi ModeMsg      ctermfg=yellow      ctermbg=NONE        cterm=NONE
-hi Title        ctermfg=red         ctermbg=NONE        cterm=bold
-hi Question     ctermfg=green       ctermbg=NONE        cterm=NONE
-hi MoreMsg      ctermfg=green       ctermbg=NONE        cterm=NONE
-hi ErrorMsg     ctermfg=white       ctermbg=red         cterm=bold
-hi WarningMsg   ctermfg=yellow      ctermbg=NONE        cterm=bold
+hi ModeMsg               ctermfg=011  ctermbg=NONE cterm=NONE
+hi Title                 ctermfg=009  ctermbg=NONE cterm=BOLD
+hi Question              ctermfg=010  ctermbg=NONE cterm=NONE
+hi MoreMsg               ctermfg=010  ctermbg=NONE cterm=NONE
+hi ErrorMsg              ctermfg=015  ctermbg=009  cterm=BOLD
+hi WarningMsg            ctermfg=011  ctermbg=NONE cterm=BOLD
 
 " Syntax highlighting groups {{{1
-hi Comment      ctermfg=brown       ctermbg=NONE        cterm=NONE
-hi Constant     ctermfg=red         ctermbg=NONE        cterm=NONE
- hi String      ctermfg=blue        ctermbg=NONE        cterm=NONE
-hi Function     ctermfg=yellow      ctermbg=NONE        cterm=bold
- hi Identifier  ctermfg=yellow      ctermbg=NONE        cterm=NONE
-hi Statement    ctermfg=green       ctermbg=NONE        cterm=bold
- hi Operator    ctermfg=magenta     ctermbg=NONE        cterm=NONE
-hi PreProc      ctermfg=darkblue    ctermbg=NONE        cterm=NONE
-hi Type         ctermfg=blue        ctermbg=NONE        cterm=bold
-hi Special      ctermfg=NONE        ctermbg=NONE        cterm=bold
- hi Delimiter   ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Underlined   ctermfg=NONE        ctermbg=NONE        cterm=underline
-hi Ignore       ctermfg=darkgray    ctermbg=NONE        cterm=NONE
-hi Error        ctermfg=white       ctermbg=red         cterm=NONE
-hi Todo         ctermfg=black       ctermbg=NONE        cterm=bold
+hi Comment               ctermfg=130  ctermbg=NONE cterm=NONE
+hi Constant              ctermfg=009  ctermbg=NONE cterm=NONE
+ hi String               ctermfg=012  ctermbg=NONE cterm=NONE
+hi Function              ctermfg=011  ctermbg=NONE cterm=BOLD
+ hi Identifier           ctermfg=011  ctermbg=NONE cterm=NONE
+hi Statement             ctermfg=010  ctermbg=NONE cterm=BOLD
+ hi Operator             ctermfg=013  ctermbg=NONE cterm=NONE
+hi PreProc               ctermfg=004  ctermbg=NONE cterm=NONE
+hi Type                  ctermfg=012  ctermbg=NONE cterm=BOLD
+hi Special               ctermfg=NONE ctermbg=NONE cterm=BOLD
+ hi Delimiter            ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Underlined            ctermfg=NONE ctermbg=NONE cterm=UNDERLINE
+hi Ignore                ctermfg=008  ctermbg=NONE cterm=NONE
+hi Error                 ctermfg=015  ctermbg=009  cterm=NONE
+hi Todo                  ctermfg=000  ctermbg=NONE cterm=BOLD
+
+" ALE {{{1
+hi ALEError              ctermfg=009               cterm=BOLD,ITALIC
+hi ALEErrorSign          ctermfg=009  ctermbg=000  cterm=BOLD
+hi ALEStyleError         ctermfg=009               cterm=ITALIC
+hi ALEStyleErrorSign     ctermfg=009  ctermbg=000  cterm=NONE
+hi ALEWarning            ctermfg=011               cterm=BOLD,ITALIC
+hi ALEWarningSign        ctermfg=011  ctermbg=000  cterm=BOLD
+hi ALEStyleWarning       ctermfg=011               cterm=ITALIC
+hi ALEStyleWarningSign   ctermfg=011  ctermbg=000  cterm=NONE
+hi ALEInfo               ctermfg=NONE              cterm=NONE
+hi ALEInfoSign           ctermfg=NONE ctermbg=000  cterm=NONE
+
+" Semshi {{{1
+hi semshiLocal           ctermfg=251
+hi semshiFree            ctermfg=183
+hi semshiGlobal          ctermfg=220
+hi semshiImported        ctermfg=214
+hi semshiParameter       ctermfg=075
+hi semshiParameterUnused ctermfg=117               cterm=UNDERLINE
+hi semshiBuiltin         ctermfg=207
+hi semshiAttribute       ctermfg=049
+hi semshiSelf            ctermfg=249
+hi semshiUnresolved      ctermfg=226               cterm=UNDERLINE
+hi semshiSelected                                  cterm=UNDERLINE
 
 " Manual overrides {{{1
 hi link hsExprKeyword Statement
-hi link hsStructure Operator
+hi link hsStructure   Operator
 hi link shDerefSimple Identifier
-hi lilyDuration ctermfg=red cterm=bold
-hi lilyRest ctermfg=blue
-hi lilyLyric cterm=italic
-hi lilyCommand ctermfg=yellow cterm=bold
 
-" ALE {{{1
-hi ALEError            ctermfg=red    cterm=bold,italic
-hi ALEErrorSign        ctermfg=red    cterm=bold ctermbg=black
-hi ALEStyleError       ctermfg=red    cterm=italic
-hi ALEStyleErrorSign   ctermfg=red               ctermbg=black
-hi ALEWarning          ctermfg=yellow cterm=bold,italic
-hi ALEWarningSign      ctermfg=yellow cterm=bold ctermbg=black
-hi ALEStyleWarning     ctermfg=yellow cterm=italic
-hi ALEStyleWarningSign ctermfg=yellow            ctermbg=black
-hi ALEInfo             ctermfg=NONE   cterm=none
-hi ALEInfoSign                        cterm=none ctermbg=black
+hi lilyDuration          ctermfg=001               cterm=BOLD
+hi lilyRest              ctermfg=012
+hi lilyLyric                                       cterm=ITALIC
+hi lilyCommand           ctermfg=011               cterm=BOLD
 
-" }}}
+hi link sqlKeyword Type
+hi link sqlOperator Operator
+
+hi link pythonStrInterpRegion Normal
+" }}}1
 let &cpo = save_cpo
